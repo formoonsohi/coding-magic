@@ -1,17 +1,39 @@
 @use '../utils/variables';
+
 body {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
   font-family: 'Montserrat Alternates', sans-serif;
 }
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
   width: 1120px;
   outline: 1px solid red;
 }
+
 .main-title {
   font-size: 24px;
   font-weight: 400;
   line-height: normal;
+}
+
+.card {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.card::before {
+  content: " ";
+  display: block;
+  width: 536px;
+  height: 1px;
+  background-color: black;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+
+.card__title {
+  text-align: center;
 }

@@ -1,1 +1,26 @@
 @use '../utils/variables';
+
+.max-number__box {
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+}
+
+.max-number__input {
+    background-color: #d7d7d7;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    max-width: 135px;
+
+    &::placeholder {
+        font-size: 12px;
+    }
+}
+
+.max-number__result {
+    font-size: 12px;
+    margin-top: 36px;
+    text-align: center;
+}
