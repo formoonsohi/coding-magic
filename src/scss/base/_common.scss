@@ -5,7 +5,10 @@ body {
   background-color: var(--main-bg-color);
   font-family: 'Montserrat Alternates', sans-serif;
 }
-
+main {
+  padding-bottom: 36px;
+  padding-top: 36px;
+}
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -14,6 +17,7 @@ body {
 }
 
 .main-title {
+  text-align: center;
   font-size: 24px;
   font-weight: 400;
   line-height: normal;
@@ -25,7 +29,7 @@ body {
 }
 
 .card::before {
-  content: " ";
+  content: ' ';
   display: block;
   width: 536px;
   height: 1px;
@@ -36,4 +40,7 @@ body {
 
 .card__title {
   text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
 }

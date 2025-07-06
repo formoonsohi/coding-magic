@@ -1,7 +1,12 @@
 @use '../utils/variables';
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .footer-container {
   display: flex;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
 }
 .footer-logo {
   width: 165px;
@@ -9,8 +14,28 @@
 }
 // .footer-list{}
 // .footer-item{}
-// .footer-link{}
+.footer-link {
+  font-size: 12px;
+  line-height: 170%;
+}
 // .subscription{}
-// .subscription-label{}
-// .subscription-button{}
-// .subscription-text{}
+.subscription-label > input {
+  padding: 10px 80px 10px 10px;
+  align-items: flex-start;
+  border-radius: 20px;
+  background: var(--main-accent-color);
+  border: none;
+}
+.subscription-button {
+  display: inline-flex;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  background: var(--main-text-color);
+  color: var(--main-bg-color);
+  margin-bottom: 18px;
+}
+.subscription-text {
+  font-size: 6px;
+}
