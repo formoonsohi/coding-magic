@@ -22,7 +22,8 @@
     background: var(--main-accent-color);
 }
 
-#calculator-input::placeholder{
+.calculator-input::placeholder {
+    color: #999; 
     font-size: 12px;
 }
 
