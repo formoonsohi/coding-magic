@@ -19,8 +19,8 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/coding-magic/assets/index-9d5490c9.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-572a8a1c.css">
+    <script type="module" crossorigin src="/coding-magic/assets/index-d48f9470.js"></script>
+    <link rel="stylesheet" href="/coding-magic/assets/index-6f2c09ea.css">
   </head>
   <body>
         <header class="header">
@@ -72,8 +72,8 @@
                 </nav>
             </div>
             <div class="header-thematic">
-                <button class="header-thematic-button">
-                    <img class="header-thematic-image" src="./src/images/light-thematic.png" alt="thematic-image">
+                <button id="toggle-theme" class="header-thematic-button">
+                    <img class="header-thematic-image" src="./src/img/themeLight.png" alt="thematic-image">
                 </button>
                 <p class="header-text">Вітаємо, User!</p>
             </div>
@@ -89,39 +89,39 @@
         </h2>
         <div class="calculator-box">
             <input type="text"
-             id="calculator-input"
+             id="first-num"
              class="calculator-input"
              placeholder="Введіть число"/>
             <ul class="calculator-list">
                 <li class="calculator-list-item">
-                    <button class="calculator-button-item">
+                    <button class="calculator-button-item" id="+">
                         +
                     </button>
                 </li>
                 <li class="calculator-list-item">
-                    <button class="calculator-button-item">
+                    <button class="calculator-button-item" id="*">
                         *
                     </button>
                 </li>
                 <li class="calculator-list-item">
-                    <button class="calculator-button-item">
+                    <button class="calculator-button-item" id="-">
                         -
                     </button>
                 </li>
                 <li class="calculator-list-item">
-                    <button class="calculator-button-item">
+                    <button class="calculator-button-item" id="/">
                         /
                     </button>
                 </li>
             </ul>
             <input type="text"
-            id="calculator-input"
+            id="second-num"
             class="calculator-input"
             placeholder="Введіть число">
-            <button class="calculator-button-item">
+            <button class="calculator-button-item" id="calculate-btn">
                 =
             </button>
-            <p class="calculator-result-text">
+            <p class="calculator-result-text input">
                 Результат
             </p>
         </div>
