@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             selectedOperator = button.id;
         });
     });
-
     const hideResultText = () => {
         resultText.textContent = '';
     };
@@ -49,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultText.textContent = 'Будь ласка, виберіть операцію.';
                 return;
         }
+
         resultText.textContent = `Результат: ${result}`;
     });
 });

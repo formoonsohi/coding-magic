@@ -1,5 +1,4 @@
 let darkMode = false;
-
 document.getElementById('toggle-theme').addEventListener('click', () => {
 darkMode = !darkMode;
 
