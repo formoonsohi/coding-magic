@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const operatorButtons = document.querySelectorAll('.calculator-button-item[id="+"], .calculator-button-item[id="-"], .calculator-button-item[id="*"], .calculator-button-item[id="/"]');
 
     let selectedOperator = '';
-
     operatorButtons.forEach(button => {
         button.addEventListener('click', () => {
             operatorButtons.forEach(btn => btn.classList.remove('active'));
@@ -14,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
             selectedOperator = button.id;
         });
     });
+    const hideResultText = () => {
+        resultText.textContent = '';
+    };
 
     calculateButton.addEventListener('click', () => {
         const num1 = parseFloat(firstNumInput.value);
