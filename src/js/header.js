@@ -18,7 +18,7 @@ toggleButton.addEventListener('click', () => {
     if (darkMode) {
         imgElement.src = moonImage;
         document.documentElement.style.setProperty('--main-text-color', '#fff');
-        document.documentElement.style.setProperty('--main-bg-color', '#000');
+        document.documentElement.style.setProperty('--main-bg-color', '#00021a');
         arrowIcon.src = arrowDownDark;
         codingMagicLogo.src = codingMagicLogoDarkTheme;
 
