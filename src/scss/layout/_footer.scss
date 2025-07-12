@@ -29,13 +29,69 @@
 .subscription-button {
   display: inline-flex;
   padding: 10px;
-  align-items: flex-start;
-  gap: 10px;
   border-radius: 20px;
   background: var(--main-text-color);
   color: var(--main-bg-color);
-  margin-bottom: 18px;
 }
 .subscription-text {
   font-size: 6px;
+  margin-top: 18px;
+}
+// модалка....
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /*затемнение*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  width: 463px;
+  height: 245px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /*если картинке хана*/
+}
+
+.modal-bg {
+  position: absolute;
+  inset: 0;
+  width: 378px;
+  height: 106px;
+  object-fit: cover;
+  z-index: 1;
+  top: 69px;
+  left: 43px;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hidden {
+  display: none;
 }
