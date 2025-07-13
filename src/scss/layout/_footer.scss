@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white; /*если картинке хана*/
+  background-color: var(--main-bg-color);
 }
 
 .modal-bg {
