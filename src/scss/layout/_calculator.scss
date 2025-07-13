@@ -1,1 +1,65 @@
 @use '../utils/variables';
+.calculator-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.calculator-tittle{
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.calculator-input{
+    width: 138px;
+    height: 35px;
+    margin-right: 38px;
+    margin-left: 10px;
+    border-color: var(--main-accent-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0 0 var(--main-box-shadow-color);
+    background: var(--main-accent-color);
+}
+
+.calculator-input::placeholder {
+    color: #999; 
+    font-size: 12px;
+}
+
+.calculator-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 62px;
+    gap: 10px;
+}
+
+.calculator-list-item{
+    flex-basis: calc((100% - 10px) / 2);
+    margin: 5px 0;
+    width: 25px;
+}
+
+.calculator-button-item{
+    border-radius: 20px;
+    width: 27px;
+    height: 25px;
+    box-shadow: 3px 3px 0 0 var(--main-box-shadow-color);
+    background: var(--main-text-color);
+    color: var(--main-bg-color);
+    font-size: 12px;
+}
+
+.calculator-result-text{
+    box-shadow: none;
+    width: 118px;
+    margin-left: 8px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: var(--main-accent-color);
+    color: var(--main-text-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+}
