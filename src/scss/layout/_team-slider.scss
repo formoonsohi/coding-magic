@@ -1,1 +1,97 @@
 @use '../utils/variables';
+
+.team-slider {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 328px;
+    margin-top: 36px;
+    position: relative;
+  }
+
+  &__arrow {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+
+  &__content {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.active {
+      left: 0;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    &.exit-left {
+      left: -100%;
+      opacity: 0;
+    }
+
+    &.exit-right {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+
+  &__image {
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    background-color: #d9d9d9;
+    margin: 0 auto 12px;
+    background-size: cover;
+    background-position: center;
+  }
+  &__icon {
+    border-radius: 20px;
+  }
+
+  &__info {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 8px;
+  }
+
+  &__pagination {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &__dot {
+    width: 16px;
+    height: 4px;
+    background-color: #d9d9d9;
+    border-radius: 2px;
+
+    &.active {
+      background-color: var(--main-text-color);
+    }
+  }
+}
