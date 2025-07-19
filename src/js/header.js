@@ -33,3 +33,82 @@ toggleButton.addEventListener('click', () => {
         codingMagicFooter.src = codingMagicLogoLightTheme;
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const welcomeModalOverlay = document.getElementById('welcomeModalOverlay');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const saveNameButton = document.getElementById('saveNameButton');
+    const userNameInput = document.getElementById('userName');
+    const userGreetingSpan = document.getElementById('userGreetingText'); 
+
+   
+    if (!welcomeModalOverlay || !closeModalButton || !saveNameButton || !userNameInput || !userGreetingSpan) {
+        console.error("Один або кілька DOM-елементів для модалки не знайдені. Перевірте ID та класи в HTML.");
+        return;
+    }
+
+    function showModal() {
+        welcomeModalOverlay.classList.add('show');
+        welcomeModalOverlay.style.display = 'flex';
+        userNameInput.focus();
+    }
+
+    function hideModal() {
+        welcomeModalOverlay.classList.remove('show');
+        welcomeModalOverlay.style.display = 'none';
+    }
+
+    function updateGreeting(name) {
+        if (userGreetingSpan) {
+            userGreetingSpan.textContent = `Вітаємо, ${name}!`;
+        }
+    }
+
+    const hasModalBeenShown = localStorage.getItem('hasWelcomeModalBeenShown');
+    const savedUserName = localStorage.getItem('userName');
+
+    if (savedUserName) {
+        updateGreeting(savedUserName);
+    } else {
+        updateGreeting("User");
+    }
+
+    if (!hasModalBeenShown) {
+        setTimeout(() => {
+            showModal();
+        }, 500); 
+    }
+
+    closeModalButton.addEventListener('click', () => {
+        hideModal();
+        localStorage.setItem('hasWelcomeModalBeenShown', 'true');
+        if (!localStorage.getItem('userName')) {
+            updateGreeting("User");
+        }
+    });
+
+    saveNameButton.addEventListener('click', () => {
+        const enteredName = userNameInput.value.trim(); 
+
+        if (enteredName) {
+            updateGreeting(enteredName); 
+            localStorage.setItem('userName', enteredName); 
+        } else { 
+            updateGreeting("User"); 
+            localStorage.removeItem('userName'); 
+        }
+
+        hideModal(); 
+        localStorage.setItem('hasWelcomeModalBeenShown', 'true');  
+    });
+
+    welcomeModalOverlay.addEventListener('click', (event) => {
+        if (event.target === welcomeModalOverlay) {
+            hideModal();
+            localStorage.setItem('hasWelcomeModalBeenShown', 'true');
+            if (!localStorage.getItem('userName')) {
+                updateGreeting("User");
+            }
+        }
+    });
+});
