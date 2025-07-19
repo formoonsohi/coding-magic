@@ -4,4 +4,4 @@ import './js/biggest-num';
 import './js/scienist';
 import './js/team-slider';
 import './js/footer';
-import './js/calctime ';
+import './js/calc-time';
