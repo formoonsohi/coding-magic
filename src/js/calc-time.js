@@ -20,5 +20,5 @@ button.addEventListener('click', () => {
   const seconds = remainingAfterDays % 60;
 
   // Форматований результат
-  output.textContent = ${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.;
+  output.textContent = `${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.`;
 });
