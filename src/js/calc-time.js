@@ -1,7 +1,7 @@
 // Отримуємо DOM-елементи
-const input = document.querySelector('.time-calc__input');
-const output = document.querySelector('.time-calc__output-text');
-const button = document.querySelector('.time-calc__btn');
+const input = document.querySelector('.');
+const output = document.querySelector('.');
+const button = document.querySelector('.');
 
 // Обробка натискання на кнопку
 button.addEventListener('click', () => {
@@ -20,5 +20,4 @@ button.addEventListener('click', () => {
   const seconds = remainingAfterDays % 60;
 
   // Форматований результат
-  output.textContent = ${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.;
-});
+  output.textContent = ${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.) }
