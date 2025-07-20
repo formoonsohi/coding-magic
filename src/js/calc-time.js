@@ -1,20 +1,25 @@
-// Отримуємо DOM-елементи
-const input = document.querySelector('.time-calc__input');
-const output = document.querySelector('.time-calc__output-text');
-const button = document.querySelector('.time-calc__btn');
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.querySelector('.calc-time-input');
+  const output = document.querySelector('.calc-time-result');
+  const button = document.querySelector('.calc-time-button');
 
-// Обробка натискання на кнопку
-button.addEventListener('click', () => {
-  const totalSeconds = parseInt(input.value);
+  button.addEventListener ('click', () => {
+    const totalSeconds = parseInt(input.value.trim());
 
-  if (isNaN(totalSeconds) || totalSeconds < 0) {
-    output.textContent = 'Будь ласка, введіть коректне додатне число.';
-    return;
-  }
+    if (isNaN(totalSeconds) || totalSeconds < 0) {
+      output.textContent = 'Будь ласка, введіть коректне додатне число.';
+      return;
+    }
 
-  const days = Math.floor(totalSeconds / (3600 * 24));
-  const remainingAfterDays = totalSeconds % (3600 * 24);
+    const days = Math.floor(totalSeconds / (3600 * 24));
+    const remainingAfterDays = totalSeconds % (3600 * 24);
+    const hours = Math.floor(remainingAfterDays / 3600);
+    const minutes = Math.floor((remainingAfterDays % 3600) / 60);
+    const seconds = remainingAfterDays % 60;
 
+    output.textContent = `${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.`;
+  });
+});
   const hours = Math.floor(remainingAfterDays / 3600);
   const minutes = Math.floor((remainingAfterDays % 3600) / 60);
   const seconds = remainingAfterDays % 60;
