@@ -2,18 +2,14 @@
         <div class="container header-flex">
             <div class="header-container">
                 <a class="header-logotype-link" href="./index.html">
-                <svg class="header-logotype" width="93" height="38">
-                    <use href="./img/coding-magic.svg"></use>
-                </svg>
+                    <img id="coding-light" class="header-logotype-photo" src="./img/coding-magic.svg" alt="icon-coding-magic">
                 </a>
                 <nav class="header-navigation">
                     <ul class="header-navigation-list">
                         <li class="header-navigation-item">
                             <a class="header-navigation-link" href="/">
                                 Інтерактив
-                                <svg class="header-arrow-down" width="11" height="7">
-                                    <use href="./img/arrow-down.svg"></use>
-                                </svg>
+                                <img id="arrow-icon" class="header-arrow-down" src="./img/arrow-down.svg" alt="arrow-down">
                                 </a>
                                 <ul class="header-navigation-arrow-down">
                                     <li class="header-navigation-arrow-down-item">
@@ -48,9 +44,27 @@
             </div>
             <div class="header-thematic">
                 <button class="header-thematic-button" id="toggle-theme">
-                <button id="toggle-theme" class="header-thematic-button">
                     <img class="header-thematic-image" src="./img/themeLight.png" alt="thematic-image">
                 </button>
-                <p class="header-text">Вітаємо, User!</p>
+                <p class="header-text" id="userGreetingText">Вітаємо, User!</p>
             </div>
     </header>
+
+ <div class="modal-overlay" id="welcomeModalOverlay">
+        <div class="modal-content-header">
+            <button class="modal-close-button" id="closeModalButton">&times;</button>
+            <p class="modal-description">Привіт! <br>
+                Ви потрапили на сайт інтерактивних ігор та завдань. <br> 
+                Надіємось, що вам сподобається і ви отримаєте позитивні емоції! Бажаємо вам гарно провести час!</p>
+            <div class="modal-icon-row">
+            </div>
+            <div class="modal-input-group">
+                <label for="userName" class="modal-input-label">Введіть своє ім'я:</label>
+                <input type="text" id="userName" class="modal-input" placeholder="Ваше ім'я...">
+            </div>
+            <div class="modal-icon-row">
+            </div>
+            <img src="./img/background-modal-header.svg" alt="background-header" class="modal-background-header">
+            <button class="modal-save-button" id="saveNameButton">Зберегти</button>
+        </div>
+    </div>
