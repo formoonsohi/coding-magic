@@ -46,6 +46,25 @@
                 <button class="header-thematic-button" id="toggle-theme">
                     <img class="header-thematic-image" src="./img/themeLight.png" alt="thematic-image">
                 </button>
-                <p class="header-text">Вітаємо, User!</p>
+                <p class="header-text" id="userGreetingText">Вітаємо, User!</p>
+            </div>
             </div>
     </header>
+
+ <div class="modal-overlay" id="welcomeModalOverlay">
+        <div class="modal-content-header">
+            <button class="modal-close-button" id="closeModalButton">&times;</button>
+            <p class="modal-description">Привіт! <br>
+                Ви потрапили на сайт інтерактивних ігор та завдань. <br> 
+                Надіємось, що вам сподобається і ви отримаєте позитивні емоції! Бажаємо вам гарно провести час!</p>
+            <div class="modal-icon-row">
+            </div>
+            <div class="modal-input-group">
+                <label for="userName" class="modal-input-label">Введіть своє ім'я:</label>
+                <input type="text" id="userName" class="modal-input" placeholder="Ваше ім'я...">
+            </div>
+            <div class="modal-icon-row">
+            </div>
+            <button class="modal-save-button" id="saveNameButton">Зберегти</button>
+        </div>
+    </div>
