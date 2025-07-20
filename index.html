@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/coding-magic/favicon.svg" />
@@ -102,7 +102,7 @@
   <div class="search-block">
     <input class="leap-year-check-input" type="text" id="year" placeholder="Введіть рік народження">
     <button class="check-btn">
-      <span class="check-span"><img src="/coding-magic/assets/search-3f174def.svg" alt="search"></span>
+      <span class="check-span"><img src="./public/search.svg" alt="search"></span>
     </button>
   </div>
   <p class="check-text" id="result"></p>
@@ -236,7 +236,13 @@
         </p>
       </div>
       <div class="team-slider__slide active">
-        <div class="team-slider__image"></div>
+        <div class="team-slider__image">
+          <img
+            src="/coding-magic/assets/roma-913e3fdc.jpg"
+            alt="Roma"
+            class="team-slider__icon"
+          />
+        </div>
         <p class="card__title">Ромчик</p>
         <p class="team-slider__info">Зробив 3 числа і динозаврика</p>
       </div>
@@ -254,7 +260,13 @@
         </p>
       </div>
       <div class="team-slider__slide">
-        <div class="team-slider__image"></div>
+        <div class="team-slider__image">
+          <img
+            src="/coding-magic/assets/denis-ed9b0a49.jpg"
+            alt="Denis"
+            class="team-slider__icon"
+          />
+        </div>
         <p class="card__title">Денис</p>
         <p class="team-slider__info">
           Зробив калькулятор часу і секцію з командою
@@ -300,27 +312,42 @@
     </main>
     <footer class="footer">
   <div class="container footer-container">
-    <img id="coding-footer" src="/coding-magic/assets/coding-magic-c35fe9e2.svg" alt="logo" class="footer-logo" />
+    <img
+      id="coding-footer"
+      src="/coding-magic/assets/coding-magic-c35fe9e2.svg"
+      alt="logo"
+      class="footer-logo"
+    />
     <ul class="footer-list">
       <li class="footer-item">
-        <a href="tel: +3801234567890" class="footer-link">Тел: +38 (123) 456 78 90</a>
+        <a href="tel:+3801234567890" class="footer-link"
+          >Тел: +38 (123) 456 78 90</a
+        >
       </li>
       <li class="footer-item">
-        <a href="mailto:codingmagic@gmail.com" class="footer-link">E-Mail: codingmagic@gmail.com</a>
+        <a href="mailto:codingmagic@gmail.com" class="footer-link"
+          >E-Mail: codingmagic@gmail.com</a
+        >
       </li>
       <li class="footer-item">
-        <a href="https://facebook.com" class="footer-link">Facebook: CodingMagic</a>
+        <a href="https://facebook.com" class="footer-link"
+          >Facebook: CodingMagic</a
+        >
       </li>
       <li class="footer-item">
-        <a href="https://twitter.com" class="footer-link">Twitter: CodingMagic</a>
+        <a href="https://twitter.com" class="footer-link"
+          >Twitter: CodingMagic</a
+        >
       </li>
       <li class="footer-item">
-        <a href="https://instagram.com" class="footer-link">Instagram: CodingMagic</a>
+        <a href="https://instagram.com" class="footer-link"
+          >Instagram: CodingMagic</a
+        >
       </li>
     </ul>
     <div class="subscription">
       <form method="post" data-modal-form>
-        <label for="name" class="subscription-label">
+        <label for="emailInput" class="subscription-label">
           <input
             class="input"
             type="text"
