@@ -1,8 +1,70 @@
 @use '../utils/variables';
  // {} [] () '' "" ``
 
-.calc-time-wraper {
+card {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.card__title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.calc-time-row {
   display: flex;
-  gap: 100px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.calc-time-form {
+  display: flex;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.calc-time-input {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ddd;
+  font-size: 16px;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  outline: none;
+}
+
+.calc-time-button {
+  background-color: #000;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   justify-content: center;
-} 
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+
+.calc-time-button img {
+  filter: invert(1);
+}
+
+.calc-time-dots {
+  flex-grow: 1;
+  text-align: center;
+  color: #999;
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+
+.calc-time-result {
+  min-width: 120px;
+  text-align: right;
+  font-weight: normal;
+  white-space: nowrap;
+}
