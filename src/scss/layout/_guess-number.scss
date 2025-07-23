@@ -1,1 +1,42 @@
 @use '../utils/variables';
+.guess-title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+}
+.guess-block {
+  border-radius: 20px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  width: 150px;
+  background: #d7d7d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.guess-input {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  color: #7e7e7e;
+  border: none;
+  outline: none;
+  background-color: #d7d7d7;
+  margin-left: 10px;
+}
+.guess-btn {
+  border-radius: 0 20px 20px 0;
+  background-color: #000;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.guess-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: right;
+  color: #039900;
+}

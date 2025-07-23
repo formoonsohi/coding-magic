@@ -21,3 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     output.textContent = `${days} дн. ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
   });
 });
+  const hours = Math.floor(remainingAfterDays / 3600);
+  const minutes = Math.floor((remainingAfterDays % 3600) / 60);
+  const seconds = remainingAfterDays % 60;
+
+  // Форматований результат
+  output.textContent = `${days} дн. ${hours} год. ${minutes} хв. ${seconds} сек.`;
+});
