@@ -6,3 +6,5 @@ import './js/scienist';
 import './js/team-slider';
 import './js/footer';
 import './js/calc-time';
+import './js/guess-year';
+import './js/rock-paper-scissors';

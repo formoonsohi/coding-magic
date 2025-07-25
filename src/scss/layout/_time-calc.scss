@@ -7,6 +7,8 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  position: relative;
+  top: 22px;
 }
 
 .calc-time-form {
@@ -14,19 +16,29 @@
   border-radius: 999px;
   overflow: hidden;
   background-color: #ddd;
+  position: relative;
+  left: 312px;
 }
 
 .calc-time-input {
-  padding: 10px 20px;
   border: none;
   background-color: #ddd;
   font-size: 16px;
-  border-top-left-radius: 999px;
-  border-bottom-left-radius: 999px;
   outline: none;
+  border-radius: 20px;
+  padding: 10px 45px 10px 10px;
+  width: 150px;
+  height: 35px;
+}
+
+.calc-time-input::placeholder {
+    color: #999; 
+    font-size: 12px;
 }
 
 .calc-time-button {
+  width: 35px;
+  height: 35px;
   background-color: #000;
   border: none;
   padding: 0 20px;
@@ -43,28 +55,17 @@
 }
 
 .calc-time-dots {
+  width: 100px;
+  height: 2px;
   flex-grow: 1;
   text-align: center;
-  color: #999;
-  font-family: monospace;
-  letter-spacing: 2px;
-}
-
-.calc-time-result {
-  min-width: 120px;
-  text-align: right;
-  font-weight: normal;
-  white-space: nowrap;
-  justify-content: center;
-  gap: 33px;
+  position: relative;
+  left: 33px;
 }
 // .calc-time-form {}
 // .time-calc__input {}
 // .time-calc__btn {}
-.time__hr {
-  border-top: 1px dashed var(--main-text-color);
-  width: 100px;
-  position: static;
-  margin: 0;
+.time-calc__output-text{
+  position: relative;
+  right: 262px;
 }
-//.time-calc__output-text{}

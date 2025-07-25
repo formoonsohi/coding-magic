@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const input = document.querySelector('.calc-time-input');
-  const output = document.querySelector('.calc-time-result');
-  const button = document.querySelector('.calc-time-button');
+  const input = document.getElementById('timeInput'); 
+  const output = document.getElementById('timeOutput');
 
+  const button = document.getElementById('calculateButton'); 
   button.addEventListener('click', () => {
     const totalSeconds = parseInt(input.value.trim());
 
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const seconds = remaining % 60;
 
     const pad = n => String(n).padStart(2, '0');
+
     output.textContent = `${days} дн. ${pad(hours)}:${pad(minutes)}:${pad(
       seconds
     )}`;
